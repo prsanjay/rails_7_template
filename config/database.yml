@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: rails_7_template
+  username: <%= ENV["RAILS_7_TEMPLATE_USERNAME"] %>
+  password: <%= ENV["RAILS_7_TEMPLATE_PASSWORD"] %>
+  host: localhost
+  port: 5432
+test:
+  <<: *default
+  database: rails_7_template_test
+
+production:
+  <<: *default
+  database: rails_7_template_production
+  username: <%= ENV["RAILS_7_TEMPLATE_USERNAME"] %>
+  password: <%= ENV["RAILS_7_TEMPLATE_PASSWORD"] %>
