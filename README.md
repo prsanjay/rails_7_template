@@ -1,2 +1,2 @@
-# rails_7_template
-Bare bone template with Rails version 7
+# Rails 7
+Bare bone template of Rails 7
